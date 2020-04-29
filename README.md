@@ -30,7 +30,12 @@ N.B: Esta versão foi testada somente com ubuntu
 
 ```
 docker-compose up
-```         
+```
+- Esperar até aparecer no terminal a linha plan_rabbitmq-master_sender_1 exited with code 0 , o que significa send.py enviou
+todas as linhas com sucesso, ou aparecer a última linha de dado recebida.
+
+N.B: O serviço RabbitMQ demora um certo tempo para iniciar, no entanto os serviços send.py e receive.py ficam em loop até 
+Rabbit iniciar.
 
 ## Dados gerados 📦
 
