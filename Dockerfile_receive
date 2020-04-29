@@ -1,0 +1,13 @@
+FROM python:3.8
+
+LABEL author="Andy"
+LABEL description="Dockerfile for receive.py"
+
+COPY receive.py /code/
+COPY requirements.txt /code/
+
+WORKDIR /code/
+
+RUN pip install -r requirements.txt
+
+CMD ['python3', 'receive.py']

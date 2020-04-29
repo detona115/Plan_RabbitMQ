@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+  rabbitmq:
+    image: rabbitmq
+    ports:
+    - 5672:5672
+    - 15672:15672
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+
+  receiver:
+    build:
+      context: .
+      dockerfile: Dockerfile_receive
+    depends_on:
+      - rabbitmq
+    volumes:
+      - receiverdata:/code/procs/
+    restart: on-failure
+    command: python3 receive.py
+
+  sender:
+    build:
+      context: .
+      dockerfile: Dockerfile_send
+    depends_on:
+      - rabbitmq
+      - receiver
+    restart: on-failure
+    command: python3 send.py
+
+volumes:
+  rabbitmqdata:
+  receiverdata:
+
+
+
