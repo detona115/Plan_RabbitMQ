@@ -37,7 +37,7 @@ docker-compose up
 * O arquivo docker-compose foi configurado de tal forma que os arquivos criados pelo receive.py possam ser
 acessados e recolhidos caso necessário. Se no momento baixar e descompactar a pasta deste projeto, nenhum nome
 for alterado, o nome do volume onde estarão salvos os arquivo .json deve ser
-/var/lib/docker/volumes/planrabbitmq_receiverdata/_data
+/var/lib/docker/volumes/planrabbitmq_receiverdata/_data ou similar
 
 ## Autor ✒️
 
