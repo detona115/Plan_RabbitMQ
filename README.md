@@ -1,3 +1,4 @@
+[![GitHub license](https://img.shields.io/badge/implemented%20by-Andy-blue)](https://www.linkedin.com/in/andy-kiaka-76a983110/)
 # Plan_RabbitMQ
 
 App que consome dados de um arquivo .csv e os transferem em um pipeline no RabbitMQ
